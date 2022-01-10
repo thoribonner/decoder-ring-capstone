@@ -10,15 +10,14 @@ const caesarModule = (function () {
   // should maintain non alphas encoding and decoding
 
   const plainABC = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-  const end = plainABC.length;
   
   function _ciDecipher(char, shift){
     if (plainABC.indexOf(char) === -1) {
       return char;
     } else {
       let toShiftTo = plainABC.indexOf(char) + shift;
-      if (toShiftTo >= end) toShiftTo = toShiftTo - end;
-      if (toShiftTo < 0) toShiftTo = end + toShiftTo;
+      if (toShiftTo >= 26) toShiftTo = toShiftTo - 26;
+      if (toShiftTo < 0) toShiftTo = 26 + toShiftTo;
       return plainABC[toShiftTo];
     }
   };
