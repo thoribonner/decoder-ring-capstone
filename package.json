@@ -1,5 +1,6 @@
 {
   "name": "project-decoder-ring",
+  "homepage": "(https://thoribonner.github.io/decoder-ring-capstone",
   "version": "1.0.0",
   "description": "This project allows you to encode and decode text with a variety of different ciphers.",
   "scripts": {
